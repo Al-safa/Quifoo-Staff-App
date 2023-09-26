@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addDishActivity">
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_marginStart="16dp"
+      android:layout_marginTop="16dp"
+      android:src="@drawable/ic_spoon_fork"
+      app:tint="@color/green"
+      app:layout_constraintHeight_percent=".10"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintWidth_percent=".15" />
+
+
+  <TextView
+      android:id="@+id/textView3"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:layout_marginTop="32dp"
+      android:text="Add New Dish"
+      android:textColor="@color/green"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      app:layout_constraintStart_toEndOf="@+id/imageView"
+      app:layout_constraintTop_toTopOf="parent" />
+
+  <EditText
+      android:id="@+id/dish_name"
+      android:hint="Dish Name"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:background="@drawable/edit_text_bg"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView3"
+      app:layout_constraintVertical_bias=".15"
+      app:layout_constraintHorizontal_bias=".5"
+      app:layout_constraintWidth_percent=".80"
+      android:paddingLeft="20dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"/>
+
+  <EditText
+      android:id="@+id/dish_price"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:hint="Dish Price"
+      android:background="@drawable/edit_text_bg"
+      android:paddingLeft="20dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:layout_marginTop="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias=".5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dish_name"
+      app:layout_constraintVertical_bias="0"
+      app:layout_constraintWidth_percent=".80" />
+
+  <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/dish_category"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+      app:endIconTint="@color/green"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias=".5"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dish_price"
+      app:layout_constraintVertical_bias="0"
+      app:layout_constraintWidth_percent=".80" >
+
+    <AutoCompleteTextView
+        android:id="@+id/auto_complete_textview2"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:paddingLeft="20dp"
+      android:background="@drawable/edit_text_bg"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <EditText
+      android:id="@+id/dish_image"
+      android:layout_width="0dp"
+      android:layout_height="50dp"
+      android:background="@drawable/edit_text_bg"
+      android:hint="Dish Image Url"
+      android:paddingLeft="20dp"
+      android:paddingTop="10dp"
+      android:paddingBottom="10dp"
+      android:layout_marginTop="20dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dish_category"
+      app:layout_constraintVertical_bias="0"
+      app:layout_constraintWidth_percent=".80" />
+
+  <RadioGroup
+      android:id="@+id/radioGroup"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/dish_image">
+
+    <RadioButton
+        android:id="@+id/regularDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="20dp"
+        android:text="Regular Dish"
+        android:elevation="4dp"
+        android:background="@drawable/radio_selector"
+        android:textColor="@drawable/radio_button_text_color"
+        android:button="@android:color/transparent"/>
+
+    <RadioButton
+        android:id="@+id/specialDish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:layout_margin="20dp"
+        android:text="Special Dish"
+        android:elevation="4dp"
+        android:background="@drawable/radio_selector"
+        android:textColor="@drawable/radio_button_text_color"
+        android:button="@android:color/transparent"/>
+
+  </RadioGroup>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/add_button"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@drawable/green_button_bg"
+      android:text="Add"
+      android:textColor="@color/white"
+      android:textStyle="bold"
+      app:layout_constraintVertical_bias="0.3"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+      app:layout_constraintWidth_percent=".8" />
+
+  <androidx.appcompat.widget.AppCompatButton
+  android:id="@+id/back_button"
+  android:layout_width="0dp"
+  android:layout_height="wrap_content"
+  android:text="Back"
+  android:textColor="@color/white"
+  android:textStyle="bold"
+  android:background="@drawable/green_button_bg"
+  app:layout_constraintVertical_bias=".2"
+  app:layout_constraintWidth_percent=".8"
+  app:layout_constraintBottom_toBottomOf="parent"
+  app:layout_constraintEnd_toEndOf="parent"
+  app:layout_constraintStart_toStartOf="parent"
+  app:layout_constraintTop_toBottomOf="@+id/add_button" />
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Home" android:icon="@drawable/ic_home" android:id="@+id/view_orders_fragment"/>
+    <item android:title="Edit Menu" android:icon="@drawable/ic_edit" android:id="@+id/customize_menu_fragment"/>
+    <item android:title="Order History" android:icon="@drawable/ic_history" android:id="@+id/view_history_fragment"/>
+</menu>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_bar"
+    app:startDestination="@id/view_orders_fragment">
+
+    <fragment
+        android:id="@+id/view_orders_fragment"
+        android:name="com.example.quifoostaffapp.view_orders_fragment"
+        android:label="fragment_view_orders_fragment"
+        tools:layout="@layout/fragment_view_orders_fragment" />
+    <fragment
+        android:id="@+id/customize_menu_fragment"
+        android:name="com.example.quifoostaffapp.customize_menu_fragment"
+        android:label="fragment_customize_menu_fragment"
+        tools:layout="@layout/fragment_customize_menu_fragment" />
+    <fragment
+        android:id="@+id/view_history_fragment"
+        android:name="com.example.quifoostaffapp.view_history_fragment"
+        android:label="fragment_view_history_fragment"
+        tools:layout="@layout/fragment_view_history_fragment" />
+</navigation>
